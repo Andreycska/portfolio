@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 1rem;
 }
 
+/* HELP CLASS */
+
+.text-centre {
+    text-align: center;
+}
+
 /* HEADER */
 
 .header {
@@ -80,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8rem;
     line-height: 1.2;
     font-weight: 400;
-    color: rgba(#2b2a2c, .7);
+    color: rgba(43, 42, 44, .7);
 }
 
 /* NAV */
@@ -165,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 400;
-    color: rgba(#2b2a2c, .7);
+    color: rgba(43, 42, 44, .7);
 }
 
 .intro__photo {
@@ -195,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 /* BTN */
 
 .btn {
-    padding: 1.1rem 1.8rem;
+    padding: 1.05em 1.7em;
     display: inline-block;
     vertical-align: top;
     min-width: 11.33rem;
@@ -208,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 
     background-color: transparent;
     border: 1px solid #6a696b;
-    border-radius: 1.66rem;
+    border-radius: 1.8em;
 
     cursor: pointer;
 
@@ -218,7 +224,16 @@ h1, h2, h3, h4, h5, h6 {
 
     transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
 }
+
+.btn--sm {
+    padding: 0.7em 1.2em;
+    font-size: .93rem;
+    font-weight: 700;
+    border-width: 2px;
+}
+
 /* Усли есть предыдуший класс btn то тогда пременится правило */
+
 .btn+.btn {
     margin-left: 1rem;
 }
@@ -226,9 +241,92 @@ h1, h2, h3, h4, h5, h6 {
 .btn:hover {
     background-color: #2b2a2c;
     color: #fff;
-    box-shadow: (2px 2px 10px rgba(0,0,0,.24));
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.24);
 }
 
 .btn:focus {
     outline: none;
+}
+
+/* WORKS */
+
+.works {
+    padding: 2.8rem 0;
+}
+
+.works__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.works__nav-link {
+    margin: 0 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(43, 42, 44, .7);
+    text-decoration: none;
+}
+
+.works__nav-link:hover {
+    text-decoration: underline;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    margin: 0 -1rem 2.8rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__col {
+    flex-basis: 33.33333%;
+    padding: 1rem;
+}
+
+.portfolio__item {
+    overflow: hidden;
+
+    border-radius: 0.66rem;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+
+    transition: box-shadow .2s linear;
+}
+
+.portfolio__item:hover {
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+.portfolio__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio__item-content {
+    padding: 1rem 0.8rem;
+}
+
+.portfolio__cat {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #2b2a2c;
+    text-transform: uppercase;
+}
+
+.portfolio__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.06rem;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-transform: uppercase;
+}
+
+.portfolio__date {
+    font-size: 1.06rem;
+    font-weight: 700;
+    color: #2b2a2c;
 }

@@ -1,0 +1,234 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2b2a2c;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* PAGE */
+
+.page {
+    overflow: hidden;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* HEADER */
+
+.header {
+    padding: 1.2rem 0;
+}
+
+.header__iner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* USER */
+
+.user {
+    display: flex;
+}
+
+.user__avatar {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.user__img {
+    border-radius: 50%;
+}
+
+.user__content {
+    margin-left: 0.6rem;
+}
+
+.user__name {
+    margin-bottom: 0.2rem;
+    font-size: 1.06rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #2b2a2c;
+}
+
+.user__prof {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgba(#2b2a2c, .7);
+}
+
+/* NAV */
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    margin-left: 2rem;
+    position: relative;
+    font-size: 0.93rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #2b2a2c;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.13px;
+    background-color: #2b2a2c;
+    position: absolute;
+    bottom: -0.33rem;
+    left: 0;
+    z-index: 1;
+    transition: width .2s linear;
+}
+
+/* Если класс не nav__link--btn то тогда работает это правило */
+
+.nav__link:hover:not(.nav__link--btn)::after, 
+.nav__link.active:not(.nav__link--btn):after {
+    width: 100%;
+}
+
+.nav__link--btn {
+    padding: 0.66rem 2rem;
+    border: 0.13rem solid #2b2a2c;
+    border-radius: 20px;
+    transition: background-color .2s linear, color .2s linear;
+}
+
+.nav__link--btn:hover {
+    background-color: #2b2a2c;
+    color: #fff;
+}
+
+/* INTRO */
+
+.intro__iner {
+    padding-top: 6.66rem;
+    padding-bottom: 8.2rem;
+    display: flex;
+    border-bottom: 1px solid rgba(106, 105, 107, .3);
+    background: url('../img/intro/symbols.png') right bottom no-repeat;
+    position: relative;
+}
+
+.intro__content {
+    width: 50%;
+}
+
+.intro__subtitle {
+    font-size: 2.13rem;
+    font-weight: 200;
+    color: #2b2a2c;
+}
+
+.intro__title {
+    margin-bottom: 0.33rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2b2a2c;
+}
+
+.intro__text {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(#2b2a2c, .7);
+}
+
+.intro__photo {
+    position: absolute;
+    bottom: -1px;
+    right: 4rem;
+    z-index: 1;
+}
+
+/* SOCIAL */
+
+.social {
+    margin-bottom: 2.8rem;
+    display: flex;
+}
+
+.social__link {
+    margin-right: 0.66rem;
+    text-decoration: none;
+    transition: transform .2s linear;
+}
+
+.social__link:hover {
+    transform: translateY(-.33rem);
+}
+
+/* BTN */
+
+.btn {
+    padding: 1.1rem 1.8rem;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 11.33rem;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.06rem;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #6a696b;
+
+    background-color: transparent;
+    border: 1px solid #6a696b;
+    border-radius: 1.66rem;
+
+    cursor: pointer;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
+}
+/* Усли есть предыдуший класс btn то тогда пременится правило */
+.btn+.btn {
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    background-color: #2b2a2c;
+    color: #fff;
+    box-shadow: (2px 2px 10px rgba(0,0,0,.24));
+}
+
+.btn:focus {
+    outline: none;
+}

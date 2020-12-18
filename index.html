@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="no-scroll">
 
 <div class="page">
 
@@ -383,6 +383,54 @@
             </div><!--\.FOOTER__INER-->
         </div><!--\.CONTAINER-->
     </footer><!--\.FOOTER-->
+
+    <!-- MODAL -->
+
+    <div class="modal" style="display: none;">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button">
+                <img src="img/modal/cancel.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <img class="modal-work__photo" src="https://placehold.it/790x780" alt="my work">
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Project title</h3>
+                        <div class="modal-work__info">
+                            category <span class="modal-work__info-divider">|</span> 2020
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Client:</div>
+                        <div class="modal-work__client-company">Creative Agency</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi minima dolorum nulla magnam! Voluptatum excepturi odit eum quos, veniam vel voluptate doloremque, corporis enim eius aliquam ipsum reprehenderit nihil aut!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt error voluptatum quibusdam vel perferendis corporis, assumenda repellendus fugit, ea vitae quos sed saepe labore rem, est voluptatem rerum aut excepturi!</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button">
+                            <img src="img/modal/left-arrow.svg" alt="prev" height="11"> Previous
+                        </button>
+                        <button class="modal-work__btn" type="button">
+                            Next <img src="img/modal/right-arrow.svg" alt="next" height="11">
+                        </button>
+                    </div>
+
+                </div><!--\MODAL-WORK__CONTENT-->
+
+            </div><!--\.MODAL-WORK-->
+
+        </div><!--\.MODAL__DIALOG-->
+    </div><!--\.MODAL-->
 
 </div><!--\.PAGE-->
     

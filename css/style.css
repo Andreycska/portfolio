@@ -55,6 +55,10 @@ p {
     text-align: right;
 }
 
+.mb {
+    margin-bottom: 1.8rem;
+}
+
 .img {
     display: block;
     max-width: 100%;
@@ -706,6 +710,10 @@ p {
     background-color: #fff;
 }
 
+.modal__dialog--sm {
+    max-width: 900px;
+}
+
 .modal__close {
     width: 34px;
     height: 34px;
@@ -742,7 +750,17 @@ p {
     color: #2b2a2c;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
+}
+
+.modal__title--sm {
+    margin-bottom: 0;
+}
+
+.modal__subtitle {
+    font-size: 1.06rem;
+    color: #2b2a2c;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* MODAL-WORK */
@@ -969,4 +987,114 @@ p {
     background-color: #6a696b;
 
     transition: width .2s linear;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+}
+
+.contact__left {
+    padding: 2rem;
+    width: 47%;
+}
+
+.contact__right {
+    width: 53%;
+
+    background: #2b2a2c url(https://placehold.it/480x700) center no-repeat;
+}
+
+.contact__info {
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+
+    font-size: 0.94rem;
+    color: #2b2a2c;
+    font-weight: 300;
+}
+
+.contact__info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.contact__info-item:last-child{
+    margin-bottom: 0;
+}
+
+.contact__info-icon {
+    margin-right: 1rem;
+}
+
+/* LABEL */
+
+.label {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+
+    font-size: 0.8rem;
+    color: #2b2a2c;
+    font-weight: 700;   
+}
+
+/* INPUT */
+
+.input {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 1.3rem 1.8rem;
+
+    border: 1px solid rgba(112,112,112,0.3);
+    border-radius: 1.8rem;
+
+    transition: border-color .2s linear;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #36abc7;
+}
+
+.input::placeholder {
+    font-size: 0.8rem;
+    color: #2b2a2c;
+    font-weight: 300;
+}
+
+/* TEXTAREA */
+
+.textarea {
+    display: block;
+    width: 100%;
+    height: 200px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 1.3rem 1.8rem;
+    resize: none;
+
+    border: 1px solid rgba(112,112,112,0.3);
+    border-radius: 1.8rem;
+
+    transition: border-color .2s linear;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #36abc7;
+}
+
+.textarea::placeholder {
+    font-size: 0.8rem;
+    color: #2b2a2c;
+    font-weight: 300;
 }

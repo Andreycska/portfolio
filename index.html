@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="no-scroll">
+<body>
 
 <div class="page">
 
@@ -443,7 +443,7 @@
 
             <div class="modal__content">
 
-                <h3 class="modal__title">RESUME</h3>
+                <h3 class="modal__title text-centre">RESUME</h3>
                 <div class="text-centre">
                     <a class="btn btn--thin" href="#">DOWNLOAD PDF</a>
                     <a class="btn btn--thin" href="#">PRINT</a>
@@ -580,6 +580,59 @@
                 </div>
 
             </div><!--MODAL__CONTENT-->
+
+        </div><!--\.MODAL__DIALOG-->
+    </div><!--\.MODAL-->
+
+    <!-- MODAL -->
+
+    <div class="modal" style="display: none;">
+        <div class="modal__dialog modal__dialog--sm">
+
+            <button class="modal__close" type="button">
+                <img src="img/modal/cancel.svg" alt="Close">
+            </button>
+
+            <div class="contact">
+
+                <div class="contact__left">
+
+                    <h3 class="modal__title modal__title--sm">LET'S TALK!</h3>
+                    <div class="modal__subtitle">CALL ME OR SEND ME A REQUEST</div>
+
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="img/modal/telephone-symbol-button.svg" alt="phone" width="16">
+                            (200) 100 3000
+                        </li>
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="img/modal/email.svg" alt="email" width="16">
+                            designer@ui43.com
+                        </li>
+                    </ul>
+
+                    <form action="/" method="POST">
+
+                        <div class="mb">
+                            <label class="label" for="input-email">Adress e-mail</label>
+                            <input class="input" type="text" name="input-email" placeholder="Adress e-mail" id="input-email">
+                        </div>
+
+                        <div class="mb">
+                            <label class="label" for="input-text">Request</label>
+                            <textarea class="textarea" name="input-text" id="input-text" placeholder="Type your request..."></textarea>
+                        </div>
+
+                        <div class="text-right">
+                            <a class="btn" href="#">SEND</a>
+                        </div>
+
+                    </form><!--\.FORM-->
+    
+                </div><!--\.CONTACT__LEFT-->
+                <div class="contact__right"></div>
+
+            </div><!--\.CONTACT-->
 
         </div><!--\.MODAL__DIALOG-->
     </div><!--\.MODAL-->

@@ -65,6 +65,10 @@ p {
     height: auto;
 }
 
+.hide {
+    display: none;
+}
+
 /* HEADER */
 
 .header {

@@ -41,6 +41,7 @@ $(function(){
 
         $(modalId).addClass("show"); // показываем модальное окно
         $("body").addClass("no-scroll"); //убираем скролл у body
+        $('[data-slider="slick"]').slick("setPosition"); // зыываем слик слайдер
 
     });
 
@@ -66,6 +67,35 @@ $(function(){
 
         event.stopPropagation(); //Отменяем событие клика по его радителю, тоесть на фоне закрывается окно, а на содержимом 
 
+    });
+
+    // SLIDER: https://kenwheeler.github.io/slick/
+
+    $('[data-slider="slick"]').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
+    // SLIDER ARROWS
+
+    $(".slickPrev").on("click", function(event) { //При нажатии на кнопку Previus
+        event.preventDefault();
+
+        let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]'); // Ищем у родителя дата атрибут и запоминаем его
+
+        currentSlider.slick("slickPrev"); // Вызывваем метод слайдера slickPrev
+    });
+
+    $(".slickNext").on("click", function(event) { //При нажатии на кнопку Next
+        event.preventDefault();
+
+        let currentSlider = $(this).parents(".modal").find('[data-slider="slick"]'); // Ищем у родителя дата атрибут и запоминаем его
+
+        currentSlider.slick("slickNext"); // Вызывваем метод слайдера slickNext
     });
 
 });

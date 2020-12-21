@@ -98,4 +98,29 @@ $(function(){
         currentSlider.slick("slickNext"); // Вызывваем метод слайдера slickNext
     });
 
+    // PRINT BUTTON
+
+    const tableToPrint = document.getElementById('printMe');
+    console.log(tableToPrint);
+
+    function printData(tableToPrint) {
+        Popup($(tableToPrint).html());
+    }
+
+    function Popup(data) {
+        const mywindow = window.open('', 'printMe', 'height=600, width=1000');
+        mywindow.document.write('<link rel="stylesheet" href="css/style.css" type="text/css" />');
+        mywindow.document.write(tableToPrint.outerHTML);
+        mywindow.document.close(); // для IE >= 10 
+        mywindow.focus();          // для IE >= 10 
+        mywindow.print();
+        mywindow.close();
+        return true;
+    }
+
+    $('#printTable').on('click', function (event) {
+        event.preventDefault()
+        printData();
+        return false;
+    });
 });

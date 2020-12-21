@@ -697,12 +697,27 @@ p {
     padding: 1rem;
 
     background: rgba(6,15,49,0.9);
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s ease 0s;
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.show .modal__dialog {
+    opacity: 1;
+    transform: perspective(660px) translate(0, 0%) rotateX(0deg);
 }
 
 .modal__dialog {
@@ -712,6 +727,10 @@ p {
     position: relative;
 
     background-color: #fff;
+
+    opacity: 0;
+    transform: perspective(660px) translate(0, -100%) rotateX(45deg);
+    transition: all .8s ease 0s;
 }
 
 .modal__dialog--sm {

@@ -33,7 +33,7 @@
                     <a class="nav__link" href="#">ABOUT ME</a>
                     <a class="nav__link" href="#">BLOG</a>
                     <a class="nav__link" href="#">CONTACT</a>
-                    <a class="nav__link nav__link--btn" href="#">HIRE ME</a>
+                    <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
                 </nav>
 
             </div><!--HEADER__INER-->
@@ -61,8 +61,8 @@
                         <a class="social__link" href="#" target="_blank"><img src="img/social/bg.png" alt="tweet"></a>
                     </div>
 
-                    <a class="btn" href="#">HIRE ME</a>
-                    <button class="btn" href="#" type="button">SEE MY RESUME </button>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                    <button class="btn" href="#" type="button" data-modal="#modal_resume">SEE MY RESUME </button>
 
                 </div><!--\.INTRO__CONTENT-->
 
@@ -87,7 +87,7 @@
             <div class="portfolio" id="portfolio">
 
                 <div class="portfolio__col" data-cat="app">
-                    <div class="portfolio__item">
+                    <div class="portfolio__item" data-modal="#modal_project_1">
                         <img class="portfolio__img" src="https://placehold.it/370x300" alt="portfolio work">
                         <div class="portfolio__item-content">
                             <div class="portfolio__cat">categoria: app</div>
@@ -232,8 +232,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum numquam, facere eveniet animi eius, ipsam maxime earum asperiores magnam, inventore necessitatibus est accusantium incidunt? Quibusdam excepturi dolore adipisci molestiae tempore.</p>
                     </div>
 
-                    <a class="btn" href="#">HIRE ME</a>
-                    <button class="btn" href="#" type="button">SEE MY RESUME </button>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                    <button class="btn" href="#" type="button" data-modal="#modal_resume">SEE MY RESUME </button>
 
                 </div><!--\.ABOUT__CONTENT-->
 
@@ -377,7 +377,7 @@
                     <a class="footer__nav-link" href="#">ABOUT ME</a>
                     <a class="footer__nav-link" href="#">BLOG</a>
                     <a class="footer__nav-link" href="#">CONTACT</a>
-                    <a class="footer__nav-link footer__nav-link--btn" href="#">HIRE ME</a>
+                    <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
                 </nav>
 
             </div><!--\.FOOTER__INER-->
@@ -386,10 +386,10 @@
 
     <!-- MODAL -->
 
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_project_1">
         <div class="modal__dialog">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <img src="img/modal/cancel.svg" alt="Close">
             </button>
 
@@ -434,10 +434,10 @@
 
     <!-- MODAL -->
 
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_resume">
         <div class="modal__dialog">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <img src="img/modal/cancel.svg" alt="Close">
             </button>
 
@@ -576,7 +576,7 @@
                 </div><!--\.TIMELINE-->
 
                 <div class="text-centre">
-                    <a class="btn" href="#">hire me</a>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">hire me</a>
                 </div>
 
             </div><!--MODAL__CONTENT-->
@@ -586,10 +586,10 @@
 
     <!-- MODAL -->
 
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_hire_me">
         <div class="modal__dialog modal__dialog--sm">
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-close>
                 <img src="img/modal/cancel.svg" alt="Close">
             </button>
 

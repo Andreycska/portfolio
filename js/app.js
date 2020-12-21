@@ -3,6 +3,7 @@ $(function(){
     // WORKS FILTER
 
     let filter = $("[data-filter]"); //В переменную фильтр сохраняем все сылки с атрибутом data-filter
+    let showMore = $(".show-more-btn"); //В переменную showMore сохраняем сылку на кнопку show-more-btn
 
     filter.on("click", function(event){  //При клики на сылку
         event.preventDefault();          //убираем стандартное поведение ссылки  
@@ -10,6 +11,7 @@ $(function(){
 
         if (cat == "all") { //если cat равно all то у всех убираем класс hide
             $("[data-cat]").removeClass("hide");
+            $(showMore).css("display", "none"); // убираем кнопку
         } else {
             $("[data-cat]").each(function() { //проходимся по всем элементам у которых есть data-cat
 
@@ -21,6 +23,7 @@ $(function(){
     
                 }else { //иначе мы показываем этот блок
                     $(this).removeClass("hide");
+                    $(showMore).css("display", "inline-block"); //показываем кнопку
                 }
     
             });
@@ -101,7 +104,6 @@ $(function(){
     // PRINT BUTTON
 
     const tableToPrint = document.getElementById('printMe');
-    console.log(tableToPrint);
 
     function printData(tableToPrint) {
         Popup($(tableToPrint).html());
@@ -123,4 +125,13 @@ $(function(){
         printData();
         return false;
     });
+
+    // BUTTON SHOW MORE
+
+    showMore.on("click", function(event){  //При клики на сылку
+        event.preventDefault();          //убираем стандартное поведение ссылки  
+        $("[data-cat]").removeClass("hide"); // показываем все оставшиеся блоки
+        $(showMore).css("display", "none"); // Убираем кнопку
+    });
+
 });

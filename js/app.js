@@ -1,5 +1,15 @@
 $(function(){
 
+    // BURGER MENU
+
+    const navToggle = $("#navToggle"); //кнопка бургер меню
+    const nav = $("#nav"); // навигация
+
+    navToggle.on("click", function(event) { // При клике на бургер
+        event.preventDefault();
+        nav.toggleClass("show"); //обавляем навигации класс show
+    });
+
     // WORKS FILTER
 
     let filter = $("[data-filter]"); //В переменную фильтр сохраняем все сылки с атрибутом data-filter

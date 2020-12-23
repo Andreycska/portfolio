@@ -859,6 +859,16 @@ p {
     transform: translate3d(-50%, -50%, 0);
 }
 
+.modal-work__photo--sm {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
 .modal-work__content {
     width: 35%;
     position: relative;
@@ -1329,6 +1339,49 @@ li.slick-active button {
 
     .footer__nav-link:first-child {
         margin-left: 0;
+    }
+
+    /* MODAL */
+
+    /* MODAL PROJECT */
+
+    .modal__dialog--project {
+        max-width: 790px;
+    }
+
+    .modal-work {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-work__preview {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .modal-work__photo {
+        opacity: 0;
+    }
+    
+    .modal-work__photo--sm {
+        opacity: 1;
+    }
+
+    .modal-work__content {
+        width: 100%;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .modal-work__header {
+        margin-bottom: 1.2rem;
+    }
+
+    .modal-work__client {
+        margin-bottom: 1.2rem;
+    }
+
+    .modal-work__text {
+        margin-bottom: 3.66rem;
     }
 
 }

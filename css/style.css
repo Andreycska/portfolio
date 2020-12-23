@@ -1420,6 +1420,54 @@ li.slick-active button {
         max-width: 370px;
         margin: 0 auto;
     }
+
+    /* MODAL */
+
+    /* MODAL RESUME */
+
+    .progress-bar__item {
+        margin-bottom: 0.3rem;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .progress-bar__title {
+        margin-bottom: .5rem;
+    }
+
+    .progress-bar__right {
+        padding-left: 0;
+    }
+
+    /* MODAL HIRE ME */
+
+    .modal__dialog--sm {
+        max-width: 480px;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+    }
+
+    .contact__left {
+        width: 100%;
+        order: 2;
+    }
+
+    .contact__right {
+        width: 100%;
+        min-height: 350px;
+        order: 1;
+        background: #2b2a2c url(https://placehold.it/480x350) center no-repeat;
+    }
+
+    .contact__info {
+        margin: 1rem 0 2rem;
+    }
+
+    .mb {
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -1503,6 +1551,70 @@ li.slick-active button {
 
     .footer__nav-link {
         margin: 0.5rem 0.5rem;
+    }
+
+    /* MODAL */
+
+    /* MODAL RESUME */
+
+    .modal__content {
+        padding: 2rem 1rem;
+    }
+
+    .modal__title {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .btn--thin {
+        padding: 0.7em 1em;
+        min-width: 7rem;
+    }
+
+    .timeline {
+        margin: 2rem auto;
+    }
+
+    .timeline__col--left {
+        padding-right: 1rem;
+    }
+
+    .timeline__title {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .timeline__item {
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline__subtitle {
+        font-size: 1rem;
+    }
+
+    .timeline__col--right {
+        padding-left: 1rem;
+    }
+
+    .progress-bar {
+        margin-bottom: 1.5rem;
+    }
+
+    .progress-bar__bar {
+        width: 120px;
+    }
+
+
+
+    /* MODAL HIRE ME */
+
+    .modal__title--sm {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .modal__subtitle {
+        font-size: 0.8rem;
     }
 
 }

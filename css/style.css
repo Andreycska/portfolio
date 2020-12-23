@@ -1452,6 +1452,7 @@ li.slick-active button {
 
     .portfolio__col {
         flex-basis: 50%;
+        max-width: 370px;
     }
 
      /* NEWS */
@@ -1559,10 +1560,7 @@ li.slick-active button {
 
     .portfolio__col {
         flex-basis: 100%;
-    }
-
-    .portfolio__img {
-        width: 100%;
+        margin: 0 auto;
     }
 
     /* ABOUT */

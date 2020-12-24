@@ -76,6 +76,14 @@ p {
     position: relative;
 }
 
+.header.fixed {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
 .header__iner {
     display: flex;
     justify-content: space-between;
@@ -91,6 +99,7 @@ p {
 .user__avatar {
     width: 3.8rem;
     height: 3.8rem;
+    cursor: pointer;
 }
 
 .user__img {

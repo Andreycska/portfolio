@@ -84,6 +84,10 @@ p {
     z-index: 1000;
 }
 
+.header.active {
+    box-shadow: none;
+}
+
 .header__iner {
     display: flex;
     justify-content: space-between;
@@ -197,6 +201,7 @@ p {
     position: relative;
 
     background-color: #2b2a2c;  
+    transition: all .2s linear;
 }
 
 .burger__item::after {
@@ -210,6 +215,8 @@ p {
     top: -8px;
     right: 0;
     z-index: 1;
+
+    transition: all .2s linear;
 }
 
 .burger__item::before {
@@ -223,6 +230,22 @@ p {
     bottom: -8px;
     right: 0;
     z-index: 1;
+
+    transition: all .2s linear;
+}
+
+.burger__item.active {
+    background: none;
+}
+
+.burger__item.active::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.burger__item.active::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 /* INTRO */

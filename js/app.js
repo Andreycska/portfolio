@@ -53,10 +53,13 @@ $(function(){
     // BURGER MENU
 
     const navToggle = $("#navToggle"); //кнопка бургер меню
+    const navBurger = $("#navBurger"); // полоски бургера
     const nav = $("#nav"); // навигация
 
     navToggle.on("click", function(event) { // При клике на бургер
         event.preventDefault();
+        navBurger.toggleClass("active");
+        header.toggleClass("active");
         nav.toggleClass("show"); //обавляем навигации класс show
     });
 

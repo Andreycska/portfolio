@@ -32,6 +32,8 @@ $(function(){
         let elementOffset = $(elementId).offset().top; // куда ехать
 
         nav.removeClass("show"); // убираем класс
+        navBurger.toggleClass("active");
+        $("body").toggleClass("no-scroll");
         
         $("html, body").animate({ // анимацию движения
             scrollTop: elementOffset - 100 // едим куда - 70 пикселей

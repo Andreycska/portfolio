@@ -33,7 +33,6 @@ $(function(){
 
         nav.removeClass("show"); // убираем класс
         navBurger.toggleClass("active");
-        $("body").toggleClass("no-scroll");
         
         $("html, body").animate({ // анимацию движения
             scrollTop: elementOffset - 100 // едим куда - 70 пикселей
@@ -62,7 +61,6 @@ $(function(){
         event.preventDefault();
         navBurger.toggleClass("active"); //делаем крест из полосок
         header.toggleClass("active"); // убираем тень при раскрытом меню у header
-        $("body").toggleClass("no-scroll");//при раскрытом меню убираем скролл у body
         nav.toggleClass("show"); //обавляем навигации класс show
     });
 

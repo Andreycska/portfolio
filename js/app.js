@@ -5,6 +5,7 @@ $(function(){
     let header = $("#header"); //Позиция header 
     let intro = $("#intro"); // Позиция intro
     let introH = intro.innerHeight(); // Высота интро
+    let widthDocument = $("#intro").width(); //ширина интро
     let scrollPos = $(window).scrollTop(); // Сколько проскроли от интро
 
     checkScroll(introH,scrollPos); //Вызываем функцию проверки где скролл
@@ -32,7 +33,11 @@ $(function(){
         let elementOffset = $(elementId).offset().top; // куда ехать
 
         nav.removeClass("show"); // убираем класс
-        navBurger.toggleClass("active");
+        widthDocument = $("#intro").width();
+        if (widthDocument <= "767") { // если ширина меньше или ровна тогда
+            $("body").toggleClass("no-scroll");//при раскрытом меню убираем скролл у body
+            navBurger.toggleClass("active");
+        }
         
         $("html, body").animate({ // анимацию движения
             scrollTop: elementOffset - 100 // едим куда - 70 пикселей
@@ -61,6 +66,10 @@ $(function(){
         event.preventDefault();
         navBurger.toggleClass("active"); //делаем крест из полосок
         header.toggleClass("active"); // убираем тень при раскрытом меню у header
+        widthDocument = $("#intro").width();
+        if (widthDocument <= "767") { // если ширина меньше или ровна тогда
+            $("body").toggleClass("no-scroll");//при раскрытом меню убираем скролл у body
+        }
         nav.toggleClass("show"); //обавляем навигации класс show
     });
 
